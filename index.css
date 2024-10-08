@@ -1,0 +1,22 @@
+body {
+    font-size: 20px;
+    text-align: center;
+}
+
+input {
+    font-size: inherit;
+}
+
+.paren {
+    font-size: 3rem;
+}
+
+.coord {
+    font-size: 2rem;
+    margin: .4rem;
+    text-align: center;
+}
+
+.result {
+    padding: .4rem;
+}
