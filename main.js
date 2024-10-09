@@ -12,11 +12,17 @@ function generateFormula(x1, y1, x2, y2) {
     const m = (y2 - y1) / (x2 - x1);
     const b = y1 - (m * x1);
 
+    if (m === 0 && b === 0) {
+        return "y = 0";
+    }
+
     let formula = "y = ";
     const bSign = b >= 0 ? "+" : "-";
 
     if (m === -1) {
         formula += "-x ";
+    } else if (m === 1) {
+        formula += "x ";
     } else if (m !== 0) {
         formula += + m + "x ";
     }
