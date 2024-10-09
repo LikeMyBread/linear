@@ -11,6 +11,21 @@ function updateFormula() {
 function generateFormula(x1, y1, x2, y2) {
     const m = (y2 - y1) / (x2 - x1);
     const b = y1 - (m * x1);
-    const symbol = b >= 0 ? "+" : "-";
-    return "y = " + m + "x " + symbol + " " + Math.abs(b);
+
+    let formula = "y = ";
+    const bSign = b >= 0 ? "+" : "-";
+
+    if (m === -1) {
+        formula += "-x ";
+    } else if (m !== 0) {
+        formula += + m + "x ";
+    }
+
+    if (m !== 0 && b !== 0) {
+        formula += bSign + " " + Math.abs(b);
+    } else if (b !== 0) {
+        formula += b;
+    }
+
+    return formula;
 }
